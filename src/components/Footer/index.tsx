@@ -113,6 +113,17 @@ const Footer: React.FC = () => {
           @ Qwerty Learner
         </span>
       </div>
+      <div className="w-full text-center text-xs text-gray-400 dark:text-gray-500 pb-1">
+        Hosted by{' '}
+        <a
+          href="https://bmpi.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 dark:text-gray-500 no-underline hover:underline"
+        >
+          Dawei Ma
+        </a>
+      </div>
     </>
   )
 }
