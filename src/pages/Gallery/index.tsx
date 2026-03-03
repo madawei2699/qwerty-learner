@@ -1,49 +1,54 @@
-import React from 'react'
-import Layout from 'components/Layout'
-import DictionaryGroup from './DictionaryGroup'
-import Header from 'components/Header'
-import { NavLink, useHistory } from 'react-router-dom'
-import { useDictionaries, useSelectedDictionary } from 'store/AppState'
-import { groupBy } from 'lodash'
-import { useHotkeys } from 'react-hotkeys-hook'
 import ChapterGroup from './ChapterGroup'
-import Tooltip from 'components/Tooltip'
+import DictionaryGroup from './DictionaryGroup'
+import Header from '@/components/Header'
+import Layout from '@/components/Layout'
+import Tooltip from '@/components/Tooltip'
+import { dictionaries } from '@/resources/dictionary'
+import { currentDictInfoAtom } from '@/store'
+import groupBy from '@/utils/groupBy'
+import { useAtomValue } from 'jotai'
+import type React from 'react'
+import { useHotkeys } from 'react-hotkeys-hook'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const GalleryPage: React.FC = () => {
-  const dictionaries = useDictionaries()
-  const selectedDictionary = useSelectedDictionary()
+  const currentDictInfo = useAtomValue(currentDictInfoAtom)
   const groups = Object.entries(groupBy(dictionaries, (dict) => dict.category))
-  const history = useHistory()
-  useHotkeys('enter,esc', () => {
-    history.push('/')
-  })
+  const navigate = useNavigate()
+  useHotkeys(
+    'enter,esc',
+    () => {
+      navigate('/')
+    },
+    { preventDefault: true },
+  )
 
   return (
     <Layout>
       <Header>
         <Tooltip content="快捷键 Enter or Esc">
-          <NavLink className="bg-indigo-400 text-white dark:text-opacity-80 text-lg px-6 py-1 rounded-lg focus:outline-none" to="/">
-            返回练习
+          <NavLink className="rounded-lg bg-indigo-400 px-6 py-1 text-lg text-white focus:outline-none dark:text-opacity-80" to="/">
+            完成选择
           </NavLink>
         </Tooltip>
       </Header>
-      <div className="mt-auto mb-auto flex w-auto space-x-4 overflow-y-auto">
-        <div className="bg-indigo-50 dark:bg-blue-gray-800 rounded-lg p-6 space-y-2 overflow-y-auto flex flex-col">
-          <h2 className="sticky top-0 mb-2 font-bold text-lg text-gray-700 dark:text-white dark:text-opacity-70 text-shadow z-10">
+      <div className="mb-auto mt-auto flex w-auto space-x-4 overflow-y-auto">
+        <div className="flex flex-col space-y-2 overflow-y-auto rounded-lg bg-indigo-50 p-6 dark:bg-slate-800">
+          <h2 className="text-shadow sticky top-0 z-10 mb-2 text-lg font-bold text-gray-700 dark:text-white dark:text-opacity-70">
             词典选择
           </h2>
-          <div className="overflow-y-auto customized-scrollbar">
+          <div className="customized-scrollbar overflow-y-auto">
             {groups.map(([name, items]) => (
               <DictionaryGroup key={name} title={name} dictionaries={items} />
             ))}
           </div>
         </div>
-        <div className="p-6 overflow-y-auto bg-indigo-50 dark:bg-blue-gray-800 rounded-lg flex flex-col">
-          <h2 className="sticky top-0 mb-4 font-bold text-lg text-gray-700 dark:text-white dark:text-opacity-70 text-shadow z-10">
+        <div className="flex flex-col overflow-y-auto rounded-lg bg-indigo-50 p-6 dark:bg-slate-800">
+          <h2 className="text-shadow sticky top-0 z-10 mb-4 text-lg font-bold text-gray-700 dark:text-white dark:text-opacity-70">
             章节选择
           </h2>
-          <div className="overflow-y-auto customized-scrollbar">
-            <ChapterGroup totalWords={selectedDictionary.length} />
+          <div className="customized-scrollbar overflow-y-auto">
+            <ChapterGroup totalWords={currentDictInfo.length} />
           </div>
         </div>
       </div>

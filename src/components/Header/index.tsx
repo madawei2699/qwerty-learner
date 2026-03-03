@@ -1,20 +1,24 @@
-import React from 'react'
+import logo from '@/assets/logo.svg'
+import type { PropsWithChildren } from 'react'
+import type React from 'react'
 import { NavLink } from 'react-router-dom'
-import { ReactComponent as Logo } from 'assets/logo.svg'
 
-const Header: React.FC = ({ children }) => {
+const Header: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <nav className="w-full container mx-auto px-10 py-6">
-      <div className="w-full flex items-center justify-between">
-        <NavLink className="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" to="/">
-          <Logo className="w-16 h-16 mr-3" />
-          Qwerty Learner
+    <header className="container z-20 mx-auto w-full px-10 py-6">
+      <div className="flex w-full flex-col items-center justify-between space-y-3 lg:flex-row lg:space-y-0">
+        <NavLink
+          className="flex items-center text-2xl font-bold text-indigo-500 no-underline hover:no-underline lg:text-4xl"
+          to="https://qwerty.kaiyi.cool/"
+        >
+          <img src={logo} className="mr-3 h-16 w-16" alt="Qwerty Learner Logo" />
+          <h1>Qwerty Learner</h1>
         </NavLink>
-        <div className="flex bg-white dark:bg-gray-800 transition-colors duration-300 justify-end content-center items-center space-x-3 card rounded-large w-auto on element p-4">
+        <nav className="my-card on element flex w-auto content-center items-center justify-end space-x-3 rounded-xl bg-white p-4 transition-colors duration-300 dark:bg-gray-800">
           {children}
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   )
 }
 

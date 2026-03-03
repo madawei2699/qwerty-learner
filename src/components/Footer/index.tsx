@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
         </p>
         <br />
         <img className="ml-1 w-5/12 " src={redBookCode} alt="redBook" />
-        <p className="text-sm text-gray-500 dark:text-gray-400">Tips: 从小红书"我"的左上角点击 三 找到 扫一扫</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Tips: 从小红书“我”的左上角点击 三 找到 扫一扫</p>
         <br />
       </InfoPanel>
 
@@ -245,13 +245,13 @@ const Footer: React.FC = () => {
           Build <span className="select-all">{LATEST_COMMIT_HASH}</span>
         </span>
       </footer>
-      <div className="w-full text-center text-xs text-gray-400 dark:text-gray-500 pb-1">
+      <div className="w-full pb-1 text-center text-xs text-gray-400 dark:text-gray-500">
         Hosted by{' '}
         <a
           href="https://bmpi.dev"
           target="_blank"
           rel="noopener"
-          className="text-gray-400 dark:text-gray-500 no-underline hover:underline"
+          className="text-gray-400 no-underline hover:underline dark:text-gray-500"
         >
           Dawei Ma
         </a>

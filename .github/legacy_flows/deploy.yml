@@ -1,0 +1,30 @@
+name: Deployment to AliYun
+# on:
+#   push:
+#     branches:
+#       - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.17.0]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Packages
+        run: yarn
+      - name: Build page
+        run: yarn build
+      - name: upload files to OSS
+        uses: fangbinwei/aliyun-oss-website-action@v1
+        with:
+          accessKeyId: ${{ secrets.YUN_KEY_ID }}
+          accessKeySecret: ${{ secrets.YUN_KEY_SECRET }}
+          bucket: 'qwerty-front'
+          endpoint: 'oss-cn-beijing.aliyuncs.com'
+          folder: './build'
+          skipSetting: true

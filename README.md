@@ -7,18 +7,24 @@
 </h1>
 
 <p align="center">
-  <a href="./docs/README_EN.md">English</a> 
+  <a href="./docs/README_EN.md">English</a>
+  <a href="./docs/README_JP.md">日本語</a>
 </p>
 
 <p align="center">
   为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
 </p>
 
-<p align="center">
-  <a href="https://github.com/Kaiyiwing/qwerty-learner/blob/master/LICENSE"><img src="https://img.shields.io/github/license/KaiyiWing/qwerty-learner" alt="License"></a>
+<p align="center" style="display: flex; justify-content: center; gap: 10px;">
+  <a href="https://github.com/Realkai42/qwerty-learner/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Realkai42/qwerty-learner" alt="License"></a>
   <a><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/></a>
   <a><img src="https://img.shields.io/badge/Powered%20by-React-blue"/></a>
+  <a><img src="https://img.shields.io/github/stars/RealKai42/qwerty-learner"/></a>
+  <a><img src="https://img.shields.io/github/forks/RealKai42/qwerty-learner"/></a>
 </p>
+<div align=center>
+<a href="https://trendshift.io/repositories/3239" target="_blank" class="trendshift-badge"><img src="https://trendshift.io/api/badge/repositories/3239" alt="RealKai42%2Fqwerty-learner | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
 
 <div align=center>
 <img  src="docs/Screenshot.png"/>
@@ -26,17 +32,31 @@
 
 ## 📸 在线访问
 
-Vercel: https://qwerty.kaiyi.cool/ , https://qwerty-learner.vercel.app/  
-GitHub Pages: https://kaiyiwing.github.io/qwerty-learner/  
-Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
+**首选部署**: <https://qwerty.kaiyi.cool/>
+GitHub Pages: <https://realkai42.github.io/qwerty-learner/>
 
-国内用户建议使用 Gitee 访问
+镜像仓库:
+[GitCode: RealKai42/qwerty-learner](https://gitcode.com/RealKai42/qwerty-learner/overview)
+[Gitee: KaiyiWing/qwerty-learner](https://gitee.com/KaiyiWing/qwerty-learner)
 <br/>
 <br/>
 
-项目已发布 VSCode 插件版，一键启动、随时开始练习  
-[VSCode Plugin Market](https://marketplace.visualstudio.com/items?itemName=Kaiyi.qwerty-learner)  
-[GitHub](https://github.com/Kaiyiwing/qwerty-learner-vscode)
+项目已发布 VSCode 插件版，一键启动、随时开始练习
+[VSCode Plugin Market](https://marketplace.visualstudio.com/items?itemName=Kaiyi.qwerty-learner)
+[GitHub](https://github.com/Realkai42/qwerty-learner-vscode)
+
+<br />
+
+## 快速部署
+
+### Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRealKai42%2Fqwerty-learner)
+
+#### 部署步骤
+
+1. 更新 `Vercel Build & Development Settings` -> `Output Directory`："build"
+2. Click Deploy Button
 
 <br />
 
@@ -55,7 +75,7 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 内置了程序员工作常用单词的词库，方便练习工作中常用的单词、提高输入速度。也内置了诸多语言的 API 的练习，帮助以程序员快速熟悉常用的 API，更多语言的 API 正在逐步添加中...
 
 <div align=center>
-<img  src="https://github.com/Kaiyiwing/qwerty-learner/blob/master/docs/coder.png"/>
+<img  src="https://github.com/Realkai42/qwerty-learner/blob/master/docs/coder.png"/>
 </div>
 
 <br />
@@ -74,7 +94,7 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 方便用户在记忆单词时，同时记忆读音与音标。
 
 <div align=center>
-<img  src="https://github.com/Kaiyiwing/qwerty-learner/blob/master/docs/phonetic.jpeg"/>
+<img  src="https://github.com/Realkai42/qwerty-learner/blob/master/docs/phonetic.jpeg"/>
 </div>
 <br />
 <br />
@@ -84,7 +104,7 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 在用户完成一个章节的练习后，会弹出选项是否默写本章，方便用户巩固本章学习的单词。
 
 <div align=center>
-<img  src="https://github.com/Kaiyiwing/qwerty-learner/blob/master/docs/dictation.png"/>
+<img  src="https://github.com/Realkai42/qwerty-learner/blob/master/docs/dictation.png"/>
 </div>
 <br />
 <br />
@@ -94,14 +114,79 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 量化用户输入的速度和输入的正确率，让用户有感知的了解自己技能的提升
 
 <div align=center>
-<img  src="https://github.com/Kaiyiwing/qwerty-learner/blob/master/docs/speed.jpeg"/>
+<img  src="https://github.com/Realkai42/qwerty-learner/blob/master/docs/speed.jpeg"/>
 </div>
 <br />
 <br />
 
-### 如何导入属于自己的生词本
+## 如何贡献
 
-[导入属于自己的生词本的方法](./docs/tobuildwordbook.md)
+### 贡献代码
+
+[Call for Contributor](https://github.com/Realkai42/qwerty-learner/issues/390)
+[贡献准则](./docs/CONTRIBUTING.md)
+
+### 贡献词库
+
+[导入词典](./docs/toBuildDict.md)
+
+## 运行项目
+
+本项目是基于`React`开发的，需要 node 环境来运行。
+
+### 环境准备
+
+1. NodeJS
+2. Git
+3. Yarn
+
+> **验证是否已经拥有相关环境**
+>
+> 1. 手动验证  
+>    请在命令行下执行以下命令，查看是否有对应版本输出
+>
+>    ```sh
+>    node --version
+>    git --version
+>    yarn --version
+>    ```
+>
+> 2. 脚本验证  
+>    使用我们提供的脚本对所需环境进行验证，如果确实依赖项会自动安装
+>    - Windows 用户可以直接执行 [pre-check.ps1](scripts/pre-check.ps1) 脚本
+>    - MacOS 用户可以直接执行 [pre-check.sh](scripts/pre-check.sh) 脚本
+
+如果有对应环境缺失，我们可以参考下列官方文档进行安装
+
+> - [NodeJS](https://nodejs.org/en/download)
+> - [Git](https://git-scm.com/downloads)
+> - [yarn](https://classic.yarnpkg.com/lang/en/docs/install)
+
+### 手动安装
+
+1. 在命令行中执行 `git clone https://github.com/RealKai42/qwerty-learner.git` 将项目拉取到本地, 如果不使用 git 可能因为缺少依赖而无法运行
+2. 在命令行中执行 `cd qwerty-learner`，进入项目根目录，执行`yarn install`来下载依赖。
+3. 执行`yarn start`来启动项目，项目默认地址为`http://localhost:5173/`
+4. 在浏览器中打开`http://localhost:5173/`来访问项目。
+
+### 脚本执行
+
+对于 Windows 用户，可以直接执行 [install.ps1](scripts/install.ps1) 脚本，来一键安装依赖并启动项目。
+
+1. 打开 powershell，定位到项目根目录中的`scripts`目录
+2. 在命令行中，执行`.\install.ps1`
+3. 等待脚本完成。
+
+> 备注
+> 脚本依赖`winget`来安装 node，仅在 Windows 10 1709（版本 16299）或更高版本上受支持！
+
+对于 MacOS 用户，可以直接执行 [install.sh](scripts/install.sh) 脚本来一键安装依赖并启动项目
+
+1. 打开终端，并进入此项目文件夹
+2. 在命令行中执行 `scripts/install.sh`
+3. 等待脚本完成
+
+> 此脚本依赖于 `homebrew`，请确保自己电脑上可以执行`brew`命令
 
 ## 🏆 荣誉
 
@@ -109,7 +194,8 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 - V2EX 全站热搜项目
 - Gitee 全站推荐项目
 - [少数派首页推荐](https://sspai.com/post/67535)
-- Gitee 最有价值开源项目([GVP](https://gitee.com/gvp))
+- GitCode 开源摘星计划-毕业项目（[G-Star 计划](https://gitcode.com/g-star)）
+- Gitee 最有价值开源项目（[GVP](https://gitee.com/gvp)）
 
 ## 📕 词库列表
 
@@ -131,8 +217,10 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 - 人教版英语 3-9 年级
 - 王陆雅思王听力语料库 [@Saigyouji_WKKun](https://github.com/ggehuliang)
 - 日语常见词、N1 ～ N5 [@xiaojia](https://github.com/wetery)
+- 哈萨克语基础 3000 词(哈拼版) 来源于 [@Elgar](https://github.com/Elgar17) 由 [@Herbert He](https://github.com/HerbertHe) 通过 [哈拼](https://ha-pin.js.org) 技术支持
 
-如果您需要背诵其他词库，欢迎在 Issue 中提出。
+如果您需要背诵其他词库，欢迎在 Issue 中提出
+
 <br />
 <br />
 
@@ -140,11 +228,11 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 
 - JavaScript API. [@sdu-gyf](https://github.com/sdu-gyf)
 - Node.js API. [@chrysalis1215](https://github.com/chrysalis1215)
-- Java API. [@darkSheep](https://github.com/SFAfreshman)
+- Java API. [@darkSheep](https://github.com/darkSheep404)
 - Linux Command. [@归谜](https://github.com/vhxubo)
 - C#: List API [@nidbCN](https://github.com/nidbCN)
 
-目前 API 相关词库主要依赖于社区贡献，如果您想贡献自己需要的 API 词库，建议参考 [Issue #42](https://github.com/Kaiyiwing/qwerty-learner/issues/40) [pr #67](https://github.com/Kaiyiwing/qwerty-learner/pull/67) 贡献词典。
+目前 API 相关词库主要依赖于社区贡献，如果您想贡献自己需要的 API 词库，建议参考 [Issue #42](https://github.com/Realkai42/qwerty-learner/issues/40) [pr #67](https://github.com/Realkai42/qwerty-learner/pull/67) 贡献词典。
 
 <br />
 <br />
@@ -153,7 +241,7 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 
 目前项目处于开发初期，新功能正在持续添加中，如果你对软件有任何功能与建议，欢迎在 Issues 中提出
 
-项目的进展与未来计划在 [Issue](https://github.com/Kaiyiwing/qwerty-learner/issues/42) 中详细介绍，内部也包含对未来功能的意见征询等，如果对 Qwerty Learner 的未来感兴趣，欢迎参与讨论。
+项目的进展与未来计划在 [Issue](https://github.com/Realkai42/qwerty-learner/issues/42) 中详细介绍，内部也包含对未来功能的意见征询等，如果对 Qwerty Learner 的未来感兴趣，欢迎参与讨论。
 
 如果你也喜欢本软件的设计思想，欢迎提交 pr，非常感谢你对我们的支持！
 <br />
@@ -163,7 +251,7 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 
 如果您对本项目感兴趣，我们非常欢迎参与到项目的贡献中，我们会尽可能地提供帮助
 
-在贡献前，希望您阅读 [Issue #42](https://github.com/Kaiyiwing/qwerty-learner/issues/42) 了解我们目前的开发计划，我们希望您能参与到"计划中"的工作亦或者 Issue 区 Label 为 "Help Wanted" 的工作，我们也非常欢迎您实现自己的想法。
+在贡献前，希望您阅读 [Issue #42](https://github.com/Realkai42/qwerty-learner/issues/42) 了解我们目前的开发计划，我们希望您能参与到"计划中"的工作亦或者 Issue 区 Label 为 "Help Wanted" 的工作，我们也非常欢迎您实现自己的想法。
 
 如果您确定了想要参与的工作，希望在有基本进展后提交 draft pr，我们可以在 draft pr 上进行讨论，也有利于听取其他 collaborator 的意见。
 
@@ -177,37 +265,37 @@ Gitee Pages: https://kaiyiwing.gitee.io/qwerty-learner/
 
 如果您喜欢我们软件，非常感谢您对我们未来的支持!
 
-<img  src="https://github.com/Kaiyiwing/qwerty-learner/blob/master/docs/alipay.png" width="200px"/>
+<img  src="https://github.com/Realkai42/qwerty-learner/blob/master/docs/alipay.png" width="200px"/>
 
 ## 👨‍💻 Contributors
 
-<a href="https://github.com/Kaiyiwing/qwerty-learner/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Kaiyiwing/qwerty-learner" />
+<a href="https://github.com/Realkai42/qwerty-learner/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Realkai42/qwerty-learner" />
 </a>
 
 ## 🎁 大感谢
 
 ### 灵感来源
 
-[Keybr](https://www.keybr.com/)  
+[Keybr](https://www.keybr.com/)
 以算法著称，功能非常完善的打字网站，根据用户输入每个字母的正确率与速度生成“伪英语”来帮助用户集中锻炼个别输入较慢的字母。并可以根据用户的输入记录生成完整的分析报告。
 
 也是本项目的核心灵感来源，Keybr 更多针对英语为母语的用户。在我使用 Keybr 练习打字时，觉得虽然生成的伪英语能够练习输入不顺畅的个别字母，但并不能提升非母语用户对单词的掌握，于是有了本项目。
 
-[Typing Academy](https://www.typing.academy)  
-非常优秀的打字练习网站  
+[Typing Academy](https://www.typing.academy)
+非常优秀的打字练习网站
 其优秀的 UI 风格，以及对速度、正确率的展示极大的影响了本项目的 UI 设计
 
-[react-code-game](https://github.com/webzhd/react-code-game)  
+[react-code-game](https://github.com/webzhd/react-code-game)
 一个非常酷的开源项目，使用 ts 实现，可以在练习打字的同时练习 js 内置 api，项目中添加代码 api 的想法便来源自此项目。
 <br/><br/>
 
 ### 开源项目
 
-[React](https://github.com/facebook/react) & [CRA](https://github.com/facebook/create-react-app)  
+[React](https://github.com/facebook/react) & [CRA](https://github.com/facebook/create-react-app)
 完整和详细的文档对初学者非常友好，React 系的文档是我目前自学过程中读过最棒的文档，几乎解决使用中大部分问题。非常感谢 React 对开源世界的贡献，为我们搭建了很好的基础，让初学者也能构建非常棒的软件。
 
-[Tailwindcss](https://tailwindcss.com/docs)  
+[Tailwindcss](https://tailwindcss.com/docs)
 如果没有 tailwind，这个项目还有再拖一阵子，tailwind 的设计思路解决了 css 入门选手对写复杂 css 的恐惧，让新手以一个非常舒适的方式去设计 UI。
 <br/><br/>
 
@@ -240,4 +328,4 @@ JS API 来自于[react-code-game](https://github.com/webzhd/react-code-game) ，
 
 ## 🌟 Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/Kaiyiwing/qwerty-learner.svg)](https://starchart.cc/Kaiyiwing/qwerty-learner)
+[![Stargazers over time](https://starchart.cc/Realkai42/qwerty-learner.svg)](https://starchart.cc/Realkai42/qwerty-learner)

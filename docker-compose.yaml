@@ -1,30 +1,9 @@
-version: "3"
+version: '3'
 
 services:
   qwertylearner:
-    image: "node:14"
-    user: "root"
-    working_dir: "/app/qwerty-learner"
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      [8990:3000]
-    volumes:
-      - $PWD/:/app/qwerty-learner
-    command:
-      - /bin/sh
-      - -c
-      - |
-        echo 'run the bash command..'
-        npm -v
-        npm config set registry https://registry.npm.taobao.org
-        npm install -g yarn
-        cd /app/qwerty-learner
-        yarn install
-        yarn build
-        nohup yarn start &
-        echo 'success.. start..'
-        pwd
-        echo '查看输出:...'
-        cat nohup.out
-        tail -f /dev/null
-    tty: true
-    stdin_open: true
+      - '8990:5173'

@@ -1,7 +1,8 @@
+import { classNames } from '@/utils'
+import type { ReactNode } from 'react'
 import { useState } from 'react'
-import { classNames } from '../../utils/utils'
 
-const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = ({ children, content, className, placement = 'top' }) => {
+const Tooltip = ({ children, content, className, placement = 'top' }: TooltipProps) => {
   const [visible, setVisible] = useState(false)
 
   const placementClasses = {
@@ -11,23 +12,22 @@ const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = ({ children, co
 
   return (
     <div className={classNames('relative', className)}>
-      <div onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
+      <div onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)} onBlur={() => setVisible(false)}>
         {children}
       </div>
       <div
         className={`${
           visible ? 'opacity-100' : 'opacity-0'
-        } ${placementClasses} absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center pointer-events-none transition-opacity`}
+        } ${placementClasses} pointer-events-none absolute left-1/2 flex -translate-x-1/2 transform items-center justify-center transition-opacity`}
       >
-        <span className="py-1 px-2 bg-white dark:bg-gray-700 rounded-lg shadow-md text-gray-500 dark:text-gray-300 text-xs whitespace-nowrap">
-          {content}
-        </span>
+        <span className="tooltip">{content}</span>
       </div>
     </div>
   )
 }
 
 export type TooltipProps = {
+  children: ReactNode
   /** 显示文本 */
   content: string
   /** 位置 */

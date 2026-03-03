@@ -15,7 +15,26 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src"
+    "types": ["node", "unplugin-icons/types/react"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+      // "@/assets/*": ["assets/*"],
+      // "@/components/*": ["components/*"],
+      // "@/hooks/*": ["hooks/*"],
+      // "@/pages/*": ["pages/*"],
+      // "@/resources/*": ["resources/*"],
+      // "@/store/*": ["store/*"],
+      // "@/utils/*": ["utils/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly"
+        }
+      }
+    ]
   },
   "include": ["src"]
 }
