@@ -247,12 +247,7 @@ const Footer: React.FC = () => {
       </footer>
       <div className="w-full pb-1 text-center text-xs text-gray-400 dark:text-gray-500">
         Hosted by{' '}
-        <a
-          href="https://bmpi.dev"
-          target="_blank"
-          rel="noopener"
-          className="text-gray-400 no-underline hover:underline dark:text-gray-500"
-        >
+        <a href="https://bmpi.dev" className="text-gray-400 no-underline hover:underline dark:text-gray-500">
           Dawei Ma
         </a>
       </div>
