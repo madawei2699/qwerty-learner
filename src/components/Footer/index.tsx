@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
         <a
           href="https://bmpi.dev"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
           className="text-gray-400 dark:text-gray-500 no-underline hover:underline"
         >
           Dawei Ma
