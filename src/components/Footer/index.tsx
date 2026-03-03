@@ -245,6 +245,12 @@ const Footer: React.FC = () => {
           Build <span className="select-all">{LATEST_COMMIT_HASH}</span>
         </span>
       </footer>
+      <div className="w-full pb-1 text-center text-xs text-gray-400 dark:text-gray-500">
+        Hosted by{' '}
+        <a href="https://bmpi.dev" className="text-gray-400 no-underline hover:underline dark:text-gray-500">
+          Dawei Ma
+        </a>
+      </div>
     </>
   )
 }
